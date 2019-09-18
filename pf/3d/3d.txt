@@ -1,0 +1,9 @@
+First, I noticed that loops_world_path2 also does not include initial pose, so I included that in the next question.
+
+For each of the remaining 5 test cases, there are two results for each.
+The ones with 5000 particles represent near perfect convergence and estimations.
+The ones with 5 or 20 particles represent estimations with offsets.
+
+Since I vectorized all of the particles' operations, using 5000 particles was not much slower than using 5 or 20 particles. 
+
+The most interesting phenomena that I observed was that even with 5000 or 10000 particles, the filter occasionally failed to make precise estimation when provided with numerous bad observation data. The filter would quickly account for the "false" observations and converge to another point next to the actual robot. I resolved this issue by multiplying self.Alpha by 3 to give the filter more ability to recover from "false" observations. After this fix, 5000 particles could perform nearly perfectly on all test cases.

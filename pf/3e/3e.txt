@@ -1,0 +1,7 @@
+First, note that loops_world_path2_Pn50 is simply an interesting result when running that scenario with only 50 particles, the filter somehow converged inside a box and never make it out.
+
+Again, because using 5000 particles was not slow, I simply used 5000 particles to run the three “kidnapped robot” scenarios. 
+
+One interesting osbervation is that it does take some luck to obtain correct estimations. 
+Let's use rooms_world_path2_Pn5000 as an example.
+The particles will first converge in the upper left and middle left rooms because those two provide identicle observations. The particles will only converge to the right position (middle) if there are remaining particles from the middle left room when they leave the two rooms. Because then they will get significantly different verticle observations. If there are not any remaining particles from the middle left room, the particles will converge to the upper portion and fail.
