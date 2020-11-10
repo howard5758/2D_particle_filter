@@ -1,3 +1,7 @@
+To run testing and visualization:
+
+    $python RunPF.py PICKLE_FILE PARTICLE_NUM
+
 # Useful functions (* denotes files with key functions)
 
 PF.py:
