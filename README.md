@@ -1,4 +1,4 @@
-# Useful functions (* denotes files you should expect to modify)
+# Useful functions (* denotes files with key functions)
 
 PF.py:
 
